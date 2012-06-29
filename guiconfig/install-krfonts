@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir -p /usr/local/share/fonts/msttkrfonts
+cp batang.ttc gulim.ttc /usr/local/share/fonts/msttkrfonts
+fc-cache
+
+echo Done
