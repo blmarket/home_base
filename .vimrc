@@ -1,5 +1,6 @@
 syn on
 set ai
+set bg=dark
 colo default
 set ts=8
 set sw=4
@@ -10,10 +11,13 @@ set nocompatible
 filetype on
 filetype plugin indent on
 
-au BufRead *.pl setlocal equalprg=perltidy
-au BufRead *.js setlocal sw=2
-au BufRead *.js setlocal equalprg=js-beautify\ -
-au BufRead *.rb setlocal sw=2
+au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
+au BufNewFile,BufRead *.js setlocal sw=2
+"au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
+au BufNewFile,BufRead *.rb setlocal sw=2
+au BufNewFile,BufRead *.ejs setlocal sw=2
+au BufNewFile,BufRead *.html setlocal sw=2
+au BufNewFile,BufRead *.coffee setlocal sw=2
 
-com! -nargs=0 A execute 'silent !tmux send-keys C-c "bundle exec gollum ../icpc" C-m' | execute 'redraw!'
-com! -nargs=0 B execute 'silent !tmux send-keys C-c' | execute 'redraw!'
+com! -nargs=0 A execute 'silent !tmux send-keys C-c "   mocha test_service_sachal.js" C-m' | execute 'redraw!'
+com! -nargs=0 B execute 'silent !tmux send-keys C-c "   ./run" C-m' | execute 'redraw!'
