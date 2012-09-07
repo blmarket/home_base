@@ -19,5 +19,5 @@ au BufNewFile,BufRead *.ejs setlocal sw=2
 au BufNewFile,BufRead *.html setlocal sw=2
 au BufNewFile,BufRead *.coffee setlocal sw=2
 
-com! -nargs=0 A execute 'silent !tmux send-keys C-c "   mocha test_service_sachal.js" C-m' | execute 'redraw!'
+com! -nargs=0 A execute '!jslint --indent 2 --nomen %'
 com! -nargs=0 B execute 'silent !tmux send-keys C-c "   ./run" C-m' | execute 'redraw!'
