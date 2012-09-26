@@ -24,6 +24,6 @@ com! -nargs=0 B execute 'silent !tmux send-keys C-c "   ./run" C-m' | execute 'r
 highlight Folded guibg=darkgrey guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
 
-set foldopen=hor,mark,percent,quickfix,search,tag,undo
+set foldopen=mark,percent,quickfix,search,tag,undo
 "default option
 "set foldopen=block,hor,mark,percent,quickfix,search,tag,undo
