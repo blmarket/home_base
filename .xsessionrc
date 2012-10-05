@@ -3,3 +3,4 @@ xset r rate 200 50
 xsetroot -cursor_name left_ptr
 
 parcellite &
+synergys --name ubuntu &
