@@ -9,6 +9,12 @@ set expandtab
 set fencs=utf-8,cp949
 set nocompatible
 
+if has("win32")
+    set sh=bash
+    set shellcmdflag=
+    set novisualbell
+endif
+
 au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.ejs set filetype=html
