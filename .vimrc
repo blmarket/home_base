@@ -15,11 +15,14 @@ if has("win32")
     set novisualbell
 endif
 
-au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
+"au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.ejs set filetype=html
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
 au BufNewFile,BufRead *.html,*.htm,*.coffee,*.ejs,*.rb,*.js setlocal sw=2
+
+au BufWrite * mkview
+au BufRead * silent loadview
 
 filetype on
 filetype plugin indent on
