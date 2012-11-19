@@ -6,7 +6,7 @@ set ts=8
 set sw=4
 set sts=4
 set expandtab
-set fencs=utf-8,cp949
+set fencs=utf-8,cp949,ucs-bom
 set nocompatible
 
 if has("win32")
