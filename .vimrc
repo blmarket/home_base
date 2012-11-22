@@ -1,7 +1,7 @@
 syn on
 set ai
 set bg=dark
-colo default
+colo desert
 set ts=8
 set sw=4
 set sts=4
