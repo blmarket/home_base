@@ -20,6 +20,7 @@ au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.ejs set filetype=html
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
 au BufNewFile,BufRead *.html,*.htm,*.coffee,*.ejs,*.rb,*.js setlocal sw=2
+au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 au BufWrite * mkview
 au BufRead * silent loadview
