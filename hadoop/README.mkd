@@ -1,0 +1,18 @@
+Hadoop Install
+==============
+
+* Follow guide from : https://github.com/ouinformatics/hadoopinstall/blob/master/single-node/ubuntu.conf
+* Install package only openjdk-7-jdk, that's enough
+* Execute following as root.
+* `dpkg -i hadoop_1.0.4-1_x86_64.deb`
+* mkdir -p /var/lib/hadoop/hdfs
+* chown hdfs /var/lib/hadoop/hdfs
+* `su hdfs -c "ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa && cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys"`
+* `cp /etc/hadoop/hadoop-env.sh /etc/hadoop/hadoop-env.sh_old`
+* `sed 's/^export JAVA_HOME.*$/export JAVA_HOME=\/usr\/lib\/jvm\/java-7-openjdk-amd64/g' /etc/hadoop/hadoop-env.sh > /etc/hadoop/hadoop-env.sh_new`
+* `mv /etc/hadoop/hadoop-env.sh_new /etc/hadoop/hadoop-env.sh`
+* setup xml files into /etc/hadoop for all nodes(including master/slaves)
+* make directory for hdfs data(mkdir somedir, chown hdfs somedir)
+* su hdfs -c "hadoop namenode -format"
+* su hdfs -c "/usr/sbin/start-all.sh"
+
