@@ -8,3 +8,6 @@ xsetroot -cursor_name left_ptr
 
 parcellite &
 synergys --name ubuntu &
+
+# below command is to fake java to know I'm using non-repainting WM
+wmname LG3D
