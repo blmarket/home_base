@@ -26,6 +26,9 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'derekwyatt/vim-scala'
+Bundle 'tpope/vim-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'mintplant/vim-literate-coffeescript'
 " "
 " " original repos on github
 " Bundle 'tpope/vim-fugitive'
@@ -39,8 +42,9 @@ Bundle 'derekwyatt/vim-scala'
 "au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.iced set filetype=coffee
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
-au BufNewFile,BufRead *.html,*.htm,*.coffee,*.ejs,*.rb,*.js setlocal sw=2
+au BufNewFile,BufRead *.html,*.htm,*.litcoffee,*.coffee,*.iced,*.ejs,*.rb,*.js setlocal sw=2
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " au BufWrite * mkview
@@ -60,3 +64,6 @@ set foldopen=mark,percent,quickfix,search,tag,undo
 "set foldopen=block,hor,mark,percent,quickfix,search,tag,undo
 "
 set clipboard+=unnamed
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
