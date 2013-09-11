@@ -1,13 +1,10 @@
-xrandr --output DP3 --off --output DP2 --off --output DP1 --mode 2560x1440 --pos 0x0 --rotate normal --dpi 120 --output HDMI3 --off --output HDMI2 --off --output HDMI1 --off --output VGA1 --off
-sudo intel_reg_write 0x70008 0xC4000050
 # redshift -O 5000
 
 xset m 0 0
 xset r rate 200 50
 xsetroot -cursor_name left_ptr
 
-parcellite &
-synergys --name ubuntu &
+clipit &
 
 # below command is to fake java to know I'm using non-repainting WM
 wmname LG3D
