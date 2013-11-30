@@ -1,4 +1,26 @@
+" put this line first in ~/.vimrc
+set nocompatible
+filetype indent plugin on
 syn on
+
+fun SetupVAM()
+  let c = get(g:, 'vim_addon_manager', {})
+  let g:vim_addon_manager = c
+  let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
+  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
+  " let g:vim_addon_manager = { your config here see "commented version" example and help
+  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
+    execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
+                \       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+  endif
+  call vam#ActivateAddons(['github:derekwyatt/vim-scala'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:tpope/vim-markdown'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:kchmck/vim-coffee-script'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:mintplant/vim-literate-coffeescript'], {'auto_install' : 0 })
+  " Also See "plugins-per-line" below
+endfun
+call SetupVAM()
+
 set ai
 set bg=dark
 colo desert
@@ -15,29 +37,24 @@ if has("win32")
     set novisualbell
 endif
 
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-Bundle 'derekwyatt/vim-scala'
-Bundle 'tpope/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mintplant/vim-literate-coffeescript'
-" "
-" " original repos on github
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" " vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
+" " let Vundle manage Vundle
+" " required! 
+" Bundle 'gmarik/vundle'
+" 
+" " My Bundles here:
+" Bundle 'derekwyatt/vim-scala'
+" Bundle 'tpope/vim-markdown'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'mintplant/vim-literate-coffeescript'
+" " "
+" " " original repos on github
+" " Bundle 'tpope/vim-fugitive'
+" " Bundle 'Lokaltog/vim-easymotion'
+" " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" " Bundle 'tpope/vim-rails.git'
+" " " vim-scripts repos
+" " Bundle 'L9'
+" " Bundle 'FuzzyFinder'
 
 "au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
 au BufNewFile,BufRead *.json set filetype=json
@@ -60,10 +77,4 @@ highlight Folded guibg=darkgrey guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
 
 set foldopen=mark,percent,quickfix,search,tag,undo
-"default option
-"set foldopen=block,hor,mark,percent,quickfix,search,tag,undo
-"
 set clipboard+=unnamed
-
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
