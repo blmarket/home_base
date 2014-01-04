@@ -1,2 +1,0 @@
-sudo ipfw add fwd 127.0.0.1,12345 tcp from me to 10.128.0.0/10
-redsocks
