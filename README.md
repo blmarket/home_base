@@ -19,13 +19,17 @@ You can install them separately.
 * copy .uim.d/ into your home directory.
 * install uim-byeoru(will include other uim modules as well)
 
-## dwm, sakura configuration
+## Linux : dwm configuration
 
 * debcheckout dwm
 * edit config.def.h
-  * change modifier key into window key.
-  * remove mod-space shortcuts
-* clone my sakura package to use it with your dwm
-  * git clone https://github.com/blmarket/sakura.git
-  * git-buildpackage sakura
-  * apt-get install [some deb file built]
+  * change modifier key into window key(Meta).
+  * remove mod-space shortcuts because we use it for language change.
+
+## OS X : homebrew configuration
+
+* `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+* `brew install vim --override-system-vi`
+* `brew install terminator`
+* `brew install dwm`
+* dwm install guide: https://gist.github.com/vangberg/311377
