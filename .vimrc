@@ -30,6 +30,7 @@ set sts=4
 set expandtab
 set fencs=utf-8,cp949,ucs-bom
 set nocompatible
+set backspace=indent,eol,start
 
 if has("win32")
     set sh=bash
