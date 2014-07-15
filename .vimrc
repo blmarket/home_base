@@ -17,13 +17,12 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:tpope/vim-markdown'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:kchmck/vim-coffee-script'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:mintplant/vim-literate-coffeescript'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:altercation/vim-colors-solarized'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
 
 set ai
-set bg=dark
-colo desert
 set ts=8
 set sw=4
 set sts=4
@@ -79,3 +78,7 @@ highlight FoldColumn guibg=darkgrey guifg=white
 
 set foldopen=mark,percent,quickfix,search,tag,undo
 set clipboard+=unnamed
+
+set bg=dark
+colo solarized
+let g:solarized_termcolors=256
