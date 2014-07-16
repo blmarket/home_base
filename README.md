@@ -8,6 +8,7 @@ You can install them separately.
 * copy these files below into your home directory
   * .bashrc
   * .vimrc
+  * .zshrc
 
 ## font configuration
 
