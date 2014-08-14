@@ -18,6 +18,7 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:kchmck/vim-coffee-script'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:mintplant/vim-literate-coffeescript'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:altercation/vim-colors-solarized'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:solarnz/thrift.vim'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
@@ -30,31 +31,14 @@ set expandtab
 set fencs=utf-8,cp949,ucs-bom
 set nocompatible
 set backspace=indent,eol,start
+set ignorecase
+set smartcase
 
 if has("win32")
     set sh=bash
     set shellcmdflag=
     set novisualbell
 endif
-
-" " let Vundle manage Vundle
-" " required! 
-" Bundle 'gmarik/vundle'
-" 
-" " My Bundles here:
-" Bundle 'derekwyatt/vim-scala'
-" Bundle 'tpope/vim-markdown'
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'mintplant/vim-literate-coffeescript'
-" " "
-" " " original repos on github
-" " Bundle 'tpope/vim-fugitive'
-" " Bundle 'Lokaltog/vim-easymotion'
-" " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" " Bundle 'tpope/vim-rails.git'
-" " " vim-scripts repos
-" " Bundle 'L9'
-" " Bundle 'FuzzyFinder'
 
 "au BufNewFile,BufRead *.pl setlocal equalprg=perltidy
 au BufNewFile,BufRead *.json set filetype=json
@@ -63,6 +47,8 @@ au BufNewFile,BufRead *.iced set filetype=coffee
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
 au BufNewFile,BufRead *.html,*.htm,*.litcoffee,*.coffee,*.iced,*.ejs,*.rb,*.js setlocal sw=2
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.thrift set noexpandtab
+au BufNewFile,BufRead *.thrift set sts=8
 
 " au BufWrite * mkview
 " au BufRead * silent loadview
