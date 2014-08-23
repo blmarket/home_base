@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/X11/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/opt/X11/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
@@ -80,4 +80,4 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/X11/
 export LANG=ko_KR.utf-8
 export TERM=xterm-256color
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export MAVEN_OPTS=-Xmx1024m
+export MAVEN_OPTS="-Xmx4096m -XX:MaxPermSize=128m"
