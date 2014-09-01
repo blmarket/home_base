@@ -35,3 +35,4 @@ You can install them separately.
 * `brew install dwm`
 * dwm install guide: https://gist.github.com/vangberg/311377
 * `defaults write com.apple.dock no-bouncing -bool TRUE`
+* `sudo nvram SystemAudioVolume=%80`
