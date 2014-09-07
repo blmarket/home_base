@@ -20,14 +20,14 @@ You can install them separately.
 * copy .uim.d/ into your home directory.
 * install uim-byeoru(will include other uim modules as well)
 
-## Linux : dwm configuration
+## Linux configuration
 
 * debcheckout dwm
 * edit config.def.h
   * change modifier key into window key(Meta).
   * remove mod-space shortcuts because we use it for language change.
 
-## OS X : homebrew configuration
+## OS X configuration
 
 * `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 * `brew install vim --override-system-vi`
@@ -35,4 +35,8 @@ You can install them separately.
 * `brew install dwm`
 * dwm install guide: https://gist.github.com/vangberg/311377
 * `defaults write com.apple.dock no-bouncing -bool TRUE`
-* `sudo nvram SystemAudioVolume=%80`
+* `sudo nvram SystemAudioVolume=%80` works only once...
+
+## Additional Configurations
+
+* `pip install asciinema` : take a look : https://asciinema.org/
