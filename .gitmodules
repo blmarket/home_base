@@ -1,3 +1,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized
+[submodule "osx-terminal.app-colors-solarized"]
+	path = osx-terminal.app-colors-solarized
+	url = https://github.com/tomislav/osx-terminal.app-colors-solarized
