@@ -1,7 +1,6 @@
 " put this line first in ~/.vimrc
 set nocompatible
 filetype indent plugin on
-syn on
 
 fun SetupVAM()
   let c = get(g:, 'vim_addon_manager', {})
@@ -19,6 +18,8 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:mintplant/vim-literate-coffeescript'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:altercation/vim-colors-solarized'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:solarnz/thrift.vim'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:vim-scripts/Cpp11-Syntax-Support'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:vim-scripts/STL-Syntax'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
@@ -29,7 +30,6 @@ set sw=4
 set sts=4
 set expandtab
 set fencs=utf-8,cp949,ucs-bom
-set nocompatible
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
@@ -53,9 +53,6 @@ au BufNewFile,BufRead *.thrift set sts=8
 " au BufWrite * mkview
 " au BufRead * silent loadview
 
-filetype on
-filetype plugin indent on
-
 com! -nargs=0 A execute "silent !tmux send-keys C-c \"   source(\'cur.R\')\" C-m" | execute 'redraw!'
 com! -nargs=0 B execute 'silent !tmux send-keys C-c "   make test" C-m' | execute 'redraw!'
 
@@ -68,3 +65,5 @@ set clipboard+=unnamed
 set bg=dark
 colo solarized
 let g:solarized_termcolors=256
+
+syn on
