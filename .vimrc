@@ -62,8 +62,7 @@ highlight FoldColumn guibg=darkgrey guifg=white
 set foldopen=mark,percent,quickfix,search,tag,undo
 set clipboard+=unnamed
 
+syn on
 set bg=dark
 colo solarized
 let g:solarized_termcolors=256
-
-syn on
