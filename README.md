@@ -36,6 +36,8 @@ You can install them separately.
 * dwm install guide: https://gist.github.com/vangberg/311377
 * `defaults write com.apple.dock no-bouncing -bool TRUE`
 * `sudo nvram SystemAudioVolume=%80` works only once...
+* `brew install https://raw.githubusercontent.com/myshen/homebrew/012eb661d98c8701332a65117f10ef39a49a413d/Library/Formula/toggle-osx-shadows.rb`
+  * remove shadow from window.
 
 ## Additional Configurations
 
