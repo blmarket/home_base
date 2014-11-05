@@ -1,7 +1,12 @@
 Home Configuration
 ------------------
 
-You can install them separately.
+Installation guide for development system
+
+## Recent Changelog
+
+* Added dwm config.h for OS X  
+  See dwm directory for details
 
 ## basic
 
@@ -29,11 +34,13 @@ You can install them separately.
 
 ## OS X configuration
 
+* Install XQuartz
 * `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 * `brew install vim --override-system-vi`
 * `brew install terminator`
-* `brew install dwm`
-* dwm install guide: https://gist.github.com/vangberg/311377
+* INSTALL DWM
+  * See dwm directory for detailed description
+  * dwm install guide: https://gist.github.com/vangberg/311377
 * `defaults write com.apple.dock no-bouncing -bool TRUE`
 * `sudo nvram SystemAudioVolume=%80` works only once...
 * `brew install https://raw.githubusercontent.com/myshen/homebrew/012eb661d98c8701332a65117f10ef39a49a413d/Library/Formula/toggle-osx-shadows.rb`
