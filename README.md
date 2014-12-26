@@ -45,6 +45,8 @@ Installation guide for development system
 * `sudo nvram SystemAudioVolume=%80` works only once...
 * `brew install https://raw.githubusercontent.com/myshen/homebrew/012eb661d98c8701332a65117f10ef39a49a413d/Library/Formula/toggle-osx-shadows.rb`
   * remove shadow from window.
+* Install f.lux for reduce blue lights
+  * `brew cask install flux` <- you need cask.
 
 ## Additional Configurations
 
