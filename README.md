@@ -32,6 +32,8 @@ Installation guide for development system
   * change modifier key into window key(Meta).
   * remove mod-space shortcuts because we use it for language change.
 
+Also trying XMonad, it worths a try!
+
 ## OS X configuration
 
 * Install XQuartz
@@ -47,6 +49,8 @@ Installation guide for development system
   * remove shadow from window.
 * Install f.lux for reduce blue lights
   * `brew cask install flux` <- you need cask.
+* Install Clipmenu for managing clipboards
+  * `brew cask install clipmenu` 
 
 ## Additional Configurations
 
