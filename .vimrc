@@ -20,6 +20,8 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:solarnz/thrift.vim'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:vim-scripts/Cpp11-Syntax-Support'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:vim-scripts/STL-Syntax'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:ivanov/vim-ipython'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:wting/rust.vim'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
