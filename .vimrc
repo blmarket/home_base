@@ -50,8 +50,8 @@ au BufNewFile,BufRead *.iced set filetype=coffee
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
 au BufNewFile,BufRead *.html,*.htm,*.litcoffee,*.coffee,*.iced,*.ejs,*.rb,*.js setlocal sw=2
 au BufNewFile,BufRead *.cpp set syntax=cpp11
-au BufNewFile,BufRead *.thrift set noexpandtab
-au BufNewFile,BufRead *.thrift set sts=8
+au BufNewFile,BufRead *.xml,*.go,*.thrift set noexpandtab
+au BufNewFile,BufRead *.xml,*.go,*.thrift set sts=8
 
 " au BufWrite * mkview
 " au BufRead * silent loadview
