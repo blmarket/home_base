@@ -19,6 +19,7 @@ Installation guide for development system
 
 * Get Gulim.ttc and Batang.ttc from your window installation, and install them using guiconfig/install-krfonts.
 * copy .fonts.conf into your home directory to make them default monospace fonts.
+* Suggests D2Coding as all-in-one coding fonts.
 
 ## UIM configuration
 
