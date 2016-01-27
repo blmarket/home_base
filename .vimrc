@@ -22,7 +22,7 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:vim-scripts/STL-Syntax'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:ivanov/vim-ipython'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:wting/rust.vim'], {'auto_install' : 0 })
-  call vam#ActivateAddons(['github:digitaltoad/vim-jade'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:pangloss/vim-javascript'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
@@ -50,8 +50,8 @@ au BufNewFile,BufRead *.iced set filetype=coffee
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
 au BufNewFile,BufRead *.html,*.htm,*.litcoffee,*.coffee,*.iced,*.ejs,*.rb,*.js setlocal sw=2
 au BufNewFile,BufRead *.cpp set syntax=cpp11
-au BufNewFile,BufRead *.xml,*.go,*.thrift set noexpandtab
-au BufNewFile,BufRead *.xml,*.go,*.thrift set sts=8
+au BufNewFile,BufRead *.thrift set noexpandtab
+au BufNewFile,BufRead *.thrift set sts=8
 
 " au BufWrite * mkview
 " au BufRead * silent loadview
@@ -63,7 +63,6 @@ highlight Folded guibg=darkgrey guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
 
 set foldopen=mark,percent,quickfix,search,tag,undo
-set clipboard+=unnamed
 
 syn on
 set bg=dark
