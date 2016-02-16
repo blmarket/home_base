@@ -35,6 +35,10 @@ Installation guide for development system
 
 Also trying XMonad, it worths a try!
 
+### npm configuration on arch linux
+
+pacman-provided npm uses '/usr' as prefix, so you better change it '/usr/local' before installing npm packages globally. also, don't forget to allow yourself to write '/usr/local' (I added myself to wheel group and change permission respectively)
+
 ## OS X configuration
 
 * Install XQuartz
