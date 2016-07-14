@@ -23,13 +23,14 @@ fun SetupVAM()
   call vam#ActivateAddons(['github:ivanov/vim-ipython'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:wting/rust.vim'], {'auto_install' : 0 })
   call vam#ActivateAddons(['github:pangloss/vim-javascript'], {'auto_install' : 0 })
+  call vam#ActivateAddons(['github:leafgarland/typescript-vim'], {'auto_install' : 0 })
   " Also See "plugins-per-line" below
 endfun
 call SetupVAM()
 
 set ai
 set ts=8
-set sw=4
+set sw=2
 set sts=4
 set expandtab
 set fencs=utf-8,cp949,ucs-bom
@@ -48,7 +49,7 @@ au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.iced set filetype=coffee
 "au BufNewFile,BufRead *.js setlocal equalprg=js_beautify\ -s\ 2\ -
-au BufNewFile,BufRead *.html,*.htm,*.litcoffee,*.coffee,*.iced,*.ejs,*.rb,*.js setlocal sw=2
+au BufNewFile,BufRead *.py set sw=4
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.thrift set noexpandtab
 au BufNewFile,BufRead *.thrift set sts=8
