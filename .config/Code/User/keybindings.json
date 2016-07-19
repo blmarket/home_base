@@ -9,5 +9,9 @@
         "key": "ctrl+b",
         "command": "editor.action.goToDeclaration",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f12",
+        "command": "workbench.action.terminal.toggleTerminal"
     }
 ]
