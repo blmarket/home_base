@@ -1,6 +1,10 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
+        "key": "alt+f12",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
         "key": "ctrl+shift+a",
         "command": "editor.action.selectAll",
         "when": "editorTextFocus"
@@ -11,7 +15,15 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+f12",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.test"
     }
 ]
