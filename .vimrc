@@ -66,6 +66,6 @@ highlight FoldColumn guibg=darkgrey guifg=white
 set foldopen=mark,percent,quickfix,search,tag,undo
 
 syn on
+let g:solarized_termcolors=256
 set bg=dark
 colo solarized
-let g:solarized_termcolors=256
