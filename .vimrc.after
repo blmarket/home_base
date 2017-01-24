@@ -1,0 +1,7 @@
+color molokai
+
+if isdirectory($VIRTUAL_ENV)
+  let g:pydoc_cmd = $VIRTUAL_ENV.'/bin/python -m pydoc'
+endif
+
+set ai
