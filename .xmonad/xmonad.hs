@@ -35,5 +35,6 @@ main = do
         $ myLayout
       , modMask = mod4Mask
       , manageHook = myManageHook <+> manageHook defaultConfig
-      } `removeKeys` [ (mod4Mask, xK_space) ]
+      } `additionalKeys` [((mod4Mask, xK_p), spawn "dmenu_run -fn 'Droid Sans Mono-9'")]
+      `removeKeys` [ (mod4Mask, xK_space) ]
 
