@@ -4,7 +4,7 @@ xset m 0 0
 xset r rate 200 50
 xsetroot -cursor_name left_ptr
 
-clipit &
+parcellite &
 
 # below command is to fake java to know I'm using non-repainting WM
 wmname LG3D
